@@ -22,6 +22,14 @@ body {
     radial-gradient(circle at top, rgba(255, 255, 255, 0.75), transparent 28%),
     linear-gradient(135deg, #F4EAE1 0%, #FFF8F3 50%, #EFE3D7 100%);
   color: #2C2520;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+html[data-theme='dark'] body {
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 24%),
+    linear-gradient(135deg, #120F0C 0%, #17110D 45%, #0B0907 100%);
+  color: #F5EFE7;
 }
 
 * { box-sizing: border-box; }
