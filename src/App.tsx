@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    document.body.style.backgroundColor = isDark ? '#120F0C' : '#F4EAE1';
+    document.body.style.backgroundColor = isDark ? '#14110D' : '#F9F6F0';
     window.localStorage.setItem('theme', theme);
   }, [theme, isDark]);
 
@@ -81,19 +81,19 @@ function App() {
   }, [text, isDeleting, titleIndex]);
 
   return (
-    <main className={isDark ? 'min-h-screen bg-[#120F0C] text-[#F5EFE7]' : 'min-h-screen bg-[#F4EAE1] text-[#2C2520]'}>
+    <main className={isDark ? 'min-h-screen bg-[#14110D] text-[#F8F4EE]' : 'min-h-screen bg-[#F9F6F0] text-[#1A1512]'}>
       <section className="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 py-4 sm:px-6 lg:px-8">
-        <header className={isDark ? 'sticky top-4 z-20 rounded-[28px] border border-white/10 bg-[#17110D]/95 p-4 shadow-[0_18px_45px_rgba(0,0,0,0.35)] backdrop-blur-xl' : 'sticky top-4 z-20 rounded-[28px] border border-[#2C2520]/10 bg-[#F4EAE1]/95 p-4 shadow-[0_18px_45px_rgba(44,37,32,0.10)] backdrop-blur-xl'}>
+        <header className={isDark ? 'sticky top-4 z-20 rounded-[28px] border border-white/10 bg-[#17110D]/80 p-4 shadow-[0_18px_45px_rgba(0,0,0,0.35)] backdrop-blur-md' : 'sticky top-4 z-20 rounded-[28px] border border-stone-200 bg-[#F9F6F0]/80 p-4 shadow-[0_18px_45px_rgba(44,37,32,0.10)] backdrop-blur-md'}>
           <nav className="flex flex-wrap items-center justify-between gap-3 text-sm">
             <a href="#home" className={isDark ? 'text-lg font-black uppercase tracking-[0.35em] text-[#F5EFE7]' : 'text-lg font-black uppercase tracking-[0.35em] text-[#2C2520]'}>JUE</a>
             <div className="flex flex-wrap items-center gap-2">
-              <a href="#about" className={isDark ? 'rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[#F5EFE7] transition hover:border-[#C88C50] hover:bg-white/12' : 'rounded-full border border-[#2C2520]/10 bg-white/70 px-4 py-2 text-[#2C2520] transition hover:border-[#C88C50] hover:bg-white'}>About</a>
-              <a href="#projects" className={isDark ? 'rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[#F5EFE7] transition hover:border-[#C88C50] hover:bg-white/12' : 'rounded-full border border-[#2C2520]/10 bg-white/70 px-4 py-2 text-[#2C2520] transition hover:border-[#C88C50] hover:bg-white'}>Projects</a>
+              <a href="#about" className={isDark ? 'rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[#F5EFE7] transition hover:border-[#C5A059] hover:bg-white/12' : 'rounded-full border border-stone-200 bg-white/80 px-4 py-2 text-[#1A1512] transition hover:border-[#C5A059] hover:bg-white'}>About</a>
+              <a href="#projects" className={isDark ? 'rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[#F5EFE7] transition hover:border-[#C5A059] hover:bg-white/12' : 'rounded-full border border-stone-200 bg-white/80 px-4 py-2 text-[#1A1512] transition hover:border-[#C5A059] hover:bg-white'}>Projects</a>
               <a href="#contact" className={isDark ? 'rounded-full bg-[#F5EFE7] px-4 py-2 font-semibold text-[#17110D] transition hover:bg-white' : 'rounded-full bg-[#2C2520] px-4 py-2 font-semibold text-[#F4EAE1] transition hover:bg-[#4A3C33]'}>Contact</a>
               <button
                 type="button"
                 onClick={() => setTheme(isDark ? 'light' : 'dark')}
-                className={isDark ? 'inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-2 text-[#F5EFE7] transition hover:border-[#C88C50] hover:bg-white/15' : 'inline-flex items-center gap-2 rounded-full border border-[#2C2520]/10 bg-white/80 px-3 py-2 text-[#2C2520] transition hover:border-[#C88C50] hover:bg-white'}
+                className={isDark ? 'inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-2 text-[#F5EFE7] transition hover:border-[#C5A059] hover:bg-white/15' : 'inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white/90 px-3 py-2 text-[#1A1512] transition hover:border-[#C5A059] hover:bg-white'}
                 aria-label="Toggle theme"
               >
                 {isDark ? <FaSun /> : <FaMoon />}
@@ -110,23 +110,28 @@ function App() {
             transition={{ duration: 0.45 }}
             className="space-y-7"
           >
-            <p className={isDark ? 'inline-flex items-center rounded-full border border-[#C88C50]/40 bg-white/8 px-4 py-2 text-sm uppercase tracking-[0.3em] text-[#F3D6B8]' : 'inline-flex items-center rounded-full border border-[#C88C50]/40 bg-[#FFF7F1] px-4 py-2 text-sm uppercase tracking-[0.3em] text-[#7B604A]'}>Vintage UI • Frontend Developer</p>
+            <div className="flex items-center gap-3 rounded-full border border-[#C5A059]/30 bg-[#FFF9F2] px-4 py-2 text-sm uppercase tracking-[0.35em] text-[#8B7142] shadow-[0_6px_18px_rgba(197,160,89,0.12)]">
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_0_6px_rgba(74,222,128,0.12)]">
+                <span className="absolute inset-0 animate-ping rounded-full bg-emerald-300/60" />
+              </span>
+              Available for Work
+            </div>
             <div className="space-y-4">
               <p className={isDark ? 'text-sm uppercase tracking-[0.35em] text-[#F3D6B8]' : 'text-sm uppercase tracking-[0.35em] text-[#7B604A]'}>I am a</p>
-              <h1 className={isDark ? 'max-w-xl text-4xl font-black tracking-tight text-[#F5EFE7] md:text-5xl lg:text-6xl' : 'max-w-xl text-4xl font-black tracking-tight text-[#2C2520] md:text-5xl lg:text-6xl'}>
-                <span className="text-[#C88C50]">{text}</span>
+              <h1 className={isDark ? 'font-display max-w-xl text-4xl font-black tracking-tight text-[#F8F4EE] md:text-5xl lg:text-6xl' : 'font-display max-w-xl text-4xl font-black tracking-tight text-[#1A1512] md:text-5xl lg:text-6xl'}>
+                <span className="text-[#C5A059]">{text}</span>
                 <span className="animate-pulse">|</span>
               </h1>
-              <p className={isDark ? 'max-w-xl text-lg text-[#EDE4DB] md:text-xl' : 'max-w-xl text-lg text-[#4A3C33] md:text-xl'}>A modern creative developer blending warm vintage tones, thoughtful interaction, and conversion-focused design for brands that want to feel memorable.</p>
+              <p className={isDark ? 'max-w-xl text-lg text-[#E7DFD5] md:text-xl' : 'max-w-xl text-lg text-[#4A3C33] md:text-xl'}>A modern creative developer blending warm vintage tones, thoughtful interaction, and conversion-focused design for brands that want to feel memorable.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a href="#projects" className={isDark ? 'rounded-full bg-[#F5EFE7] px-5 py-3 font-semibold text-[#17110D] shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition hover:bg-white' : 'rounded-full bg-[#2C2520] px-5 py-3 font-semibold text-[#F4EAE1] shadow-[0_12px_30px_rgba(44,37,32,0.20)] transition hover:bg-[#4A3C33]'}>View projects</a>
-              <a href="/my-cv.pdf" download className={isDark ? 'inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-5 py-3 font-semibold text-[#F5EFE7] shadow-[0_10px_24px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 hover:border-[#C88C50] hover:bg-white/15' : 'inline-flex items-center gap-2 rounded-full border border-[#2C2520]/15 bg-white/90 px-5 py-3 font-semibold text-[#2C2520] shadow-[0_10px_24px_rgba(44,37,32,0.12)] transition hover:-translate-y-0.5 hover:border-[#C88C50] hover:bg-white'}>Download CV</a>
-              <a href="#contact" className={isDark ? 'rounded-full border border-white/10 bg-white/10 px-5 py-3 font-semibold text-[#F5EFE7] transition hover:border-[#C88C50] hover:bg-white/15' : 'rounded-full border border-[#2C2520]/15 bg-white/80 px-5 py-3 font-semibold text-[#2C2520] transition hover:border-[#C88C50] hover:bg-white'}>Start a project</a>
+              <a href="#projects" className={isDark ? 'rounded-full bg-[#F8F4EE] px-5 py-3 font-semibold text-[#17110D] shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition hover:bg-white' : 'rounded-full bg-[#1A1512] px-5 py-3 font-semibold text-[#F9F6F0] shadow-[0_12px_30px_rgba(44,37,32,0.20)] transition hover:bg-[#2D2721]'}>View projects</a>
+              <a href="/my-cv.pdf" download className={isDark ? 'inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-5 py-3 font-semibold text-[#F8F4EE] shadow-[0_10px_24px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 hover:border-[#C5A059] hover:bg-white/15' : 'inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white/90 px-5 py-3 font-semibold text-[#1A1512] shadow-[0_10px_24px_rgba(44,37,32,0.12)] transition hover:-translate-y-0.5 hover:border-[#C5A059] hover:bg-white'}>Download CV</a>
+              <a href="#contact" className={isDark ? 'rounded-full border border-white/10 bg-white/10 px-5 py-3 font-semibold text-[#F8F4EE] transition hover:border-[#C5A059] hover:bg-white/15' : 'rounded-full border border-stone-200 bg-white/80 px-5 py-3 font-semibold text-[#1A1512] transition hover:border-[#C5A059] hover:bg-white'}>Start a project</a>
             </div>
             <ul className="grid gap-3 text-sm sm:grid-cols-2">
-              <li className={isDark ? 'rounded-3xl border border-white/10 bg-white/8 p-4 text-[#F5EFE7]' : 'rounded-3xl border border-[#2C2520]/10 bg-white/70 p-4 text-[#3D342D]'}>Warm, editorial visuals with a premium feel</li>
-              <li className={isDark ? 'rounded-3xl border border-white/10 bg-white/8 p-4 text-[#F5EFE7]' : 'rounded-3xl border border-[#2C2520]/10 bg-white/70 p-4 text-[#3D342D]'}>Fast React interfaces built for clarity and trust</li>
+              <li className={isDark ? 'rounded-3xl border border-white/10 bg-white/8 p-4 text-[#F8F4EE]' : 'rounded-3xl border border-stone-200 bg-white/80 p-4 text-[#3D342D]'}><span className="mr-2 text-[#C5A059]">•</span>Warm, editorial visuals with a premium feel</li>
+              <li className={isDark ? 'rounded-3xl border border-white/10 bg-white/8 p-4 text-[#F8F4EE]' : 'rounded-3xl border border-stone-200 bg-white/80 p-4 text-[#3D342D]'}><span className="mr-2 text-[#C5A059]">•</span>Fast React interfaces built for clarity and trust</li>
             </ul>
           </motion.article>
 
@@ -134,7 +139,7 @@ function App() {
             initial={{ opacity: 0, x: 16 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.08 }}
-            className={isDark ? 'rounded-[32px] border border-white/10 bg-white/8 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.25)]' : 'rounded-[32px] border border-[#2C2520]/10 bg-white/70 p-5 shadow-[0_18px_45px_rgba(44,37,32,0.10)]'}
+            className={isDark ? 'rounded-[32px] border border-white/10 bg-white/8 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.25)]' : 'rounded-[32px] border border-stone-200 bg-white/85 p-5 shadow-[0_18px_45px_rgba(44,37,32,0.10)]'}
           >
             <div className="rounded-[28px] border border-[#C88C50]/20 bg-[linear-gradient(135deg,#2C2520_0%,#4A3C33_45%,#7B604A_100%)] p-6 text-[#F4EAE1]">
               <p className="text-xs uppercase tracking-[0.35em] text-[#F3D6B8]">Currently focused on</p>
@@ -163,7 +168,7 @@ function App() {
         >
           <article className={isDark ? 'rounded-[28px] border border-white/10 bg-white/8 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.25)]' : 'rounded-[28px] border border-[#2C2520]/10 bg-white/70 p-6 shadow-[0_18px_45px_rgba(44,37,32,0.08)]'}>
             <p className={isDark ? 'text-xs uppercase tracking-[0.35em] text-[#F3D6B8]' : 'text-xs uppercase tracking-[0.35em] text-[#7B604A]'}>About</p>
-            <h2 className={isDark ? 'mt-3 text-2xl font-semibold text-[#F5EFE7]' : 'mt-3 text-2xl font-semibold text-[#2C2520]'}>A developer who pairs thoughtful craft with warm storytelling.</h2>
+            <h2 className={isDark ? 'font-display mt-3 text-2xl font-semibold text-[#F5EFE7]' : 'font-display mt-3 text-2xl font-semibold text-[#1A1512]'}>A developer who pairs thoughtful craft with warm storytelling.</h2>
             <p className={isDark ? 'mt-4 text-[#EDE4DB]' : 'mt-4 text-[#4A3C33]'}>My work focuses on balancing visual personality and usability. I build interfaces that invite attention, make information easy to scan, and feel genuinely inviting to use.</p>
           </article>
           <article className={isDark ? 'rounded-[28px] border border-white/10 bg-white/8 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.25)]' : 'rounded-[28px] border border-[#2C2520]/10 bg-white/70 p-6 shadow-[0_18px_45px_rgba(44,37,32,0.08)]'}>
@@ -181,7 +186,7 @@ function App() {
           <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
             <div>
               <p className={isDark ? 'text-xs uppercase tracking-[0.35em] text-[#F3D6B8]' : 'text-xs uppercase tracking-[0.35em] text-[#7B604A]'}>Projects</p>
-              <h2 className={isDark ? 'mt-2 text-2xl font-semibold text-[#F5EFE7]' : 'mt-2 text-2xl font-semibold text-[#2C2520]'}>Selected work with a strong sense of craft</h2>
+              <h2 className={isDark ? 'font-display mt-2 text-2xl font-semibold text-[#F5EFE7]' : 'font-display mt-2 text-2xl font-semibold text-[#1A1512]'}>Selected work with a strong sense of craft</h2>
             </div>
             <span className={isDark ? 'rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm text-[#EDE4DB]' : 'rounded-full border border-[#2C2520]/10 bg-white/75 px-4 py-2 text-sm text-[#4A3C33]'}>Mapped from a clean project data set</span>
           </div>
@@ -193,7 +198,7 @@ function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.35, delay: index * 0.05 }}
-                className={isDark ? 'rounded-[28px] border border-white/10 bg-white/8 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 hover:border-[#C88C50]/50' : 'rounded-[28px] border border-[#2C2520]/10 bg-white/80 p-6 shadow-[0_18px_45px_rgba(44,37,32,0.08)] transition hover:-translate-y-1 hover:border-[#C88C50]/50'}
+                className={isDark ? 'rounded-[28px] border border-stone-800 bg-stone-900/70 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-[#C5A059]/60' : 'rounded-[28px] border border-stone-200 bg-white/90 p-6 shadow-[0_18px_45px_rgba(44,37,32,0.08)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-[#C5A059]/60'}
               >
                 <div className="mb-4 flex items-center justify-between gap-3">
                   <h3 className={isDark ? 'text-xl font-semibold text-[#F5EFE7]' : 'text-xl font-semibold text-[#2C2520]'}>{project.title}</h3>
@@ -219,6 +224,7 @@ function App() {
             transition={{ duration: 0.45 }}
             className="rounded-[32px] border border-[#2C2520]/10 bg-[linear-gradient(135deg,#2C2520_0%,#4A3C33_45%,#7B604A_100%)] p-8 text-[#F4EAE1] shadow-[0_18px_45px_rgba(44,37,32,0.18)]"
           >
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-white/30 to-transparent" />
             <p className="text-xs uppercase tracking-[0.35em] text-[#F3D6B8]">Contact</p>
             <h2 className="mt-3 max-w-2xl text-3xl font-semibold">Let’s create a portfolio or product page that feels intentional, warm, and easy to trust.</h2>
             <p className="mt-4 max-w-2xl text-[#F5EBE4]">I’m available for freelance work, creative collaborations, and UI-focused product builds that need a polished experience from day one.</p>
@@ -238,6 +244,31 @@ function App() {
             </div>
           </motion.article>
         </section>
+
+        <footer className={isDark ? 'pb-8 pt-2 text-[#E7DFD5]' : 'pb-8 pt-2 text-[#4A3C33]'}>
+          <div className={isDark ? 'rounded-[28px] border border-white/10 bg-white/8 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.25)] backdrop-blur-md' : 'rounded-[28px] border border-stone-200 bg-white/85 p-5 shadow-[0_18px_45px_rgba(44,37,32,0.08)] backdrop-blur-md'}>
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-[0.35em] text-[#C5A059]">Portfolio</p>
+                <p className="mt-2 text-sm text-current">Elegant interfaces, thoughtful motion, and a vintage-first visual language.</p>
+              </div>
+              <div className="flex items-center gap-3 text-sm">
+                {socials.map(({ label, href, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={isDark ? 'inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-2 transition duration-300 hover:-translate-y-0.5 hover:border-[#C5A059] hover:bg-white/15' : 'inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white/90 px-3 py-2 transition duration-300 hover:-translate-y-0.5 hover:border-[#C5A059] hover:bg-white'}
+                  >
+                    <Icon />
+                    {label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </footer>
       </section>
     </main>
   );

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,8 +11,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F4EAE1;
-  color: #2C2520;
+  background-color: #F9F6F0;
+  color: #1A1512;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -19,17 +25,17 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.75), transparent 28%),
-    linear-gradient(135deg, #F4EAE1 0%, #FFF8F3 50%, #EFE3D7 100%);
-  color: #2C2520;
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.85), transparent 28%),
+    linear-gradient(135deg, #F9F6F0 0%, #FFFDF9 50%, #EFE6DA 100%);
+  color: #1A1512;
   transition: background-color 180ms ease, color 180ms ease;
 }
 
 html[data-theme='dark'] body {
   background:
     radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 24%),
-    linear-gradient(135deg, #120F0C 0%, #17110D 45%, #0B0907 100%);
-  color: #F5EFE7;
+    linear-gradient(135deg, #14110D 0%, #1A1713 45%, #0E0B08 100%);
+  color: #F8F4EE;
 }
 
 * { box-sizing: border-box; }
